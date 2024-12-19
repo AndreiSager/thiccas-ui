@@ -18,7 +18,14 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary: Story = {
   args: {
-    children: "Test",
     intent: "primary",
+    children: "Primary",
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    intent: "secondary",
+    children: "Secondary",
   },
 };
