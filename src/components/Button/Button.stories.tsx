@@ -35,34 +35,52 @@ export const Overview: Story = {
   },
 };
 
+/** Button fill creates a natural heirachy in a screen with multiple buttons. */
 export const Fill: Story = {
   render: () => (
     <>
-      <Button intent="primary">Solid</Button>
-      <Button intent="secondary">Outline</Button>
-      <Button intent="tertiary">None</Button>
+      <Button intent="solid">Solid</Button>
+      <Button intent="outline">Outline</Button>
+      <Button intent="none">None</Button>
     </>
   ),
   name: "Fill",
 };
 
-export const Primary: Story = {
-  args: {
-    intent: "primary",
-    children: "Button",
-  },
+export const Size: Story = {
+  render: () => (
+    <>
+      <Button>Large</Button>
+      <Button>Medium</Button>
+      <Button>Small</Button>
+    </>
+  ),
 };
 
-export const Secondary: Story = {
-  args: {
-    intent: "secondary",
-    children: "Button",
-  },
+export const Disabled: Story = {
+  render: () => (
+    <>
+      <Button intent="solid">Solid</Button>
+      <Button intent="outline">Outline</Button>
+      <Button intent="none">None</Button>
+    </>
+  ),
 };
 
-export const Tertiary: Story = {
-  args: {
-    intent: "tertiary",
-    children: "Button",
-  },
+export const State: Story = {
+  render: () => (
+    <>
+      <Button>Normal</Button>
+      <Button>Active</Button>
+    </>
+  ),
+};
+
+export const Icon: Story = {
+  render: () => (
+    <>
+      <Button>Right icon</Button>
+      <Button>Left icon</Button>
+    </>
+  ),
 };

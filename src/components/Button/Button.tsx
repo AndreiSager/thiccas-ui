@@ -4,15 +4,15 @@ import React from "react";
 const button = cva("button", {
   variants: {
     intent: {
-      primary: [
+      solid: [
         "bg-[#386641]",
         "text-white",
         "border-transparent",
         "hover:bg-[#4CAF50]",
         "rounded-md",
       ],
-      secondary: ["text-black", "border", "rounded-md"],
-      tertiary: [
+      outline: ["text-black", "border", "rounded-md"],
+      none: [
         "bg-transparent",
         "text-black",
         "border-transparent",
@@ -26,7 +26,7 @@ const button = cva("button", {
     },
   },
   defaultVariants: {
-    intent: "primary",
+    intent: "solid",
     size: "medium",
   },
 });
