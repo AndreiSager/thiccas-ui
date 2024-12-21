@@ -44,7 +44,6 @@ export const Fill: Story = {
       <Button intent="none">None</Button>
     </>
   ),
-  name: "Fill",
 };
 
 export const Size: Story = {
@@ -80,7 +79,7 @@ export const Icon: Story = {
   render: () => (
     <>
       <Button>Right icon</Button>
-      <Button>Left icon</Button>
+      <Button>Left iconn</Button>
     </>
   ),
 };

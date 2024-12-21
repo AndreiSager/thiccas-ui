@@ -12,6 +12,7 @@ const preview: Preview = {
     },
     docs: {
       canvas: { sourceState: "shown" },
+      source: { type: "dynamic" },
     },
   },
   tags: ["autodocs"],
