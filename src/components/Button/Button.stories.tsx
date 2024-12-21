@@ -27,7 +27,7 @@ export const Fill: Story = {
       <Button intent="tertiary">None</Button>
     </>
   ),
-  name: "Kinds",
+  name: "Fill",
 };
 
 export const Primary: Story = {
