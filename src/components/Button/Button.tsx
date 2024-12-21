@@ -17,6 +17,12 @@ const button = cva("button", {
         "border-transparent",
         "rounded-lg",
       ],
+      tertiary: [
+        "bg-[#386641]",
+        "text-white",
+        "border-transparent",
+        "rounded-lg",
+      ],
     },
     size: {
       small: ["text-sm", "py-1", "px-2"],

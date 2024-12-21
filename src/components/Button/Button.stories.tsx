@@ -19,13 +19,20 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     intent: "primary",
-    children: "Primary",
+    children: "Button",
   },
 };
 
 export const Secondary: Story = {
   args: {
     intent: "secondary",
-    children: "Secondary",
+    children: "Button",
+  },
+};
+
+export const Tertiary: Story = {
+  args: {
+    intent: "tertiary",
+    children: "Button",
   },
 };
