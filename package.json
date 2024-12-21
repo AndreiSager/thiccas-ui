@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_6dc415442048bd1"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.2",
@@ -33,6 +34,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "chromatic": "^11.20.2",
     "class-variance-authority": "^0.7.1",
     "core-js": "^3.0.1",
     "eslint": "^9",
