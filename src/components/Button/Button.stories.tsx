@@ -5,7 +5,7 @@ import Button from "./Button";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta: Meta<typeof Button> = {
-  title: "Button",
+  title: "Atom/Button (WIP)",
   component: Button,
   decorators: [
     (Story) => (
@@ -39,9 +39,9 @@ export const Overview: Story = {
 export const Fill: Story = {
   render: () => (
     <>
-      <Button intent="solid">Solid</Button>
-      <Button intent="outline">Outline</Button>
-      <Button intent="none">None</Button>
+      <Button intent="primary">Primary</Button>
+      <Button intent="secondary">Secondary</Button>
+      <Button intent="tertiary">Tertiary</Button>
     </>
   ),
 };
@@ -59,9 +59,9 @@ export const Size: Story = {
 export const Disabled: Story = {
   render: () => (
     <>
-      <Button intent="solid">Solid</Button>
-      <Button intent="outline">Outline</Button>
-      <Button intent="none">None</Button>
+      <Button intent="primary">Primary (Solid)</Button>
+      <Button intent="secondary">Secondary (Outline)</Button>
+      <Button intent="tertiary">Tertiary (Ghost)</Button>
     </>
   ),
 };

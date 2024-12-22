@@ -18,7 +18,8 @@
     "@radix-ui/react-tooltip": "^1.1.6",
     "next": "15.1.1",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "tailwind-merge": "^2.5.5"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.2",

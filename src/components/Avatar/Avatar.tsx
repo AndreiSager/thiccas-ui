@@ -24,6 +24,9 @@ const Avatar = ({
   ...props
 }: {
   intent?: "circle" | "square";
+  /**
+   * `3xs` `2xs`
+   */
   size: "3xs" | "2xs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl";
   content: "image" | "letter" | "smile";
 }) => {

@@ -17,5 +17,15 @@ const config: StorybookConfig = {
   docs: {
     defaultName: "Documentation",
   },
+  typescript: {
+    reactDocgen: "react-docgen-typescript",
+    reactDocgenTypescriptOptions: {
+      shouldExtractLiteralValuesFromEnum: true,
+      shouldRemoveUndefinedFromOptional: true,
+      // 👇 Default prop filter, which excludes props from node_modules
+      propFilter: (prop) =>
+        prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
+    },
+  },
 };
 export default config;
