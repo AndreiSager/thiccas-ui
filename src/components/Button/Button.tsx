@@ -39,7 +39,8 @@ export interface ButtonProps
   /**
    * What is the button's intended use?
    * <br/>Primary (Solid) = high emphasis
-   * <br/>Secondary (Outline) = medium emphasis, and Tertiary (Ghost) = low emphasis.
+   * <br/>Secondary (Outline) = medium emphasis
+   * <br/>Tertiary (Ghost) = low emphasis.
    */
   intent?: "primary" | "secondary" | "tertiary";
   size?: "sm" | "md" | "lg";
@@ -47,7 +48,6 @@ export interface ButtonProps
 
 const Button: React.FC<ButtonProps> = ({
   className,
-
   intent = "primary",
   size = "md",
   ...props
