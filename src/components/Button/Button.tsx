@@ -22,14 +22,14 @@ const button = cva("button", {
       ],
     },
     size: {
-      sm: ["text-sm", "py-1", "px-2"],
-      md: ["text-base", "py-2", "px-4"],
-      lg: ["text-lg", "py-4", "py-6"],
+      small: ["text-sm", "py-1", "px-2"],
+      medium: ["text-base", "py-2", "px-4"],
+      large: ["text-lg", "py-4", "py-6"],
     },
   },
   defaultVariants: {
     intent: "primary",
-    size: "md",
+    size: "medium",
   },
 });
 
@@ -43,13 +43,13 @@ export interface ButtonProps
    * <br/>Tertiary (Ghost) = low emphasis.
    */
   intent?: "primary" | "secondary" | "tertiary";
-  size?: "sm" | "md" | "lg";
+  size?: "small" | "medium" | "large";
 }
 
 const Button: React.FC<ButtonProps> = ({
   className,
   intent = "primary",
-  size = "md",
+  size = "medium",
   ...props
 }) => (
   <button className={twMerge(button({ intent, size, className }))} {...props} />
