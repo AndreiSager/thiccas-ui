@@ -42,6 +42,7 @@ export const Fill: Story = {
       <Button intent="primary">Primary</Button>
       <Button intent="secondary">Secondary</Button>
       <Button intent="tertiary">Tertiary</Button>
+      <Button intent="quaternary">Quaternary</Button>
     </>
   ),
 };

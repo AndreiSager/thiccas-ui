@@ -12,8 +12,15 @@ const button = cva("button", {
         "hover:bg-[#4CAF50]",
         "rounded-md",
       ],
-      secondary: ["text-black", "border", "rounded-md"],
-      tertiary: [
+      secondary: [
+        "bg-[#386641]",
+        "text-white",
+        "border-transparent",
+        "hover:bg-[#4CAF50]",
+        "rounded-md",
+      ],
+      tertiary: ["text-black", "border", "rounded-md"],
+      quaternary: [
         "bg-transparent",
         "text-black",
         "border-transparent",
@@ -38,11 +45,12 @@ export interface ButtonProps
     VariantProps<typeof button> {
   /**
    * What is the button's intended use?
-   * <br/>Primary (Solid) = high emphasis
-   * <br/>Secondary (Outline) = medium emphasis
-   * <br/>Tertiary (Ghost) = low emphasis.
+   * <br/>Primary (Solid) = high emphasios
+   * <br/>Secondary (Subtle) = medium emphasis
+   * <br/>Tertiary (Outline) = medium emphasis
+   * <br/>Quaternary (Ghost) = low emphasis
    */
-  intent?: "primary" | "secondary" | "tertiary";
+  intent?: "primary" | "secondary" | "tertiary" | "quaternary";
   size?: "small" | "medium" | "large";
 }
 
