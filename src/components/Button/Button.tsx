@@ -33,6 +33,12 @@ const button = cva("button", {
       medium: ["text-base", "py-2", "px-4"],
       large: ["text-lg", "py-4", "py-6"],
     },
+    icon: {
+      none: "",
+      left: "",
+      right: "",
+      only: "",
+    },
   },
   defaultVariants: {
     intent: "primary",
@@ -58,6 +64,8 @@ const Button: React.FC<ButtonProps> = ({
   className,
   intent = "primary",
   size = "medium",
+  icon = "none",
+  disabled = false,
   ...props
 }) => (
   <button className={twMerge(button({ intent, size, className }))} {...props} />
