@@ -1,3 +1,4 @@
+import createComponentTemplate from "@/functions/createComponentTemplate";
 import { Meta, StoryObj } from "@storybook/react";
 import Avatar from "./Avatar";
 
@@ -12,18 +13,23 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Circle: Story = {
-  args: {
-    intent: "circle",
-    size: "md",
-    content: "image",
+const avatarTemplate = createComponentTemplate(Avatar);
+
+export const Overview: Story = {
+  render: avatarTemplate.bind({}),
+  parameters: {
+    docs: {
+      liveEdit: {
+        isEnabled: false,
+      },
+    },
   },
 };
-
-export const Square: Story = {
-  args: {
-    intent: "square",
-    size: "md",
-    content: "image",
-  },
+export const Shape: Story = {
+  render: () => (
+    <>
+      <Avatar intent="circle" />
+      <Avatar intent="square" />
+    </>
+  ),
 };
