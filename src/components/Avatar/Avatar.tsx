@@ -2,23 +2,26 @@ import * as AvatarPrimitive from "@radix-ui/react-avatar";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../utils/cn";
 
-const avatarProps = cva("aspect-square overflow-hidden select-none", {
-  variants: {
-    intent: {
-      circle: "rounded-full",
-      square: "rounded-sm",
+const avatarProps = cva(
+  "aspect-square overflow-hidden select-none flex items-center justify-center align-middle",
+  {
+    variants: {
+      intent: {
+        circle: "rounded-full",
+        square: "rounded-sm",
+      },
+      size: {
+        small: "w-8 h-8",
+        medium: "w-10 h-10",
+        large: "w-12 h-12",
+      },
     },
-    size: {
-      small: "w-8 h-8",
-      medium: "w-10 h-10",
-      large: "w-12 h-12",
+    defaultVariants: {
+      intent: "circle",
+      size: "medium",
     },
-  },
-  defaultVariants: {
-    intent: "circle",
-    size: "medium",
-  },
-});
+  }
+);
 
 export interface AvatarProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -39,7 +42,7 @@ const Avatar: React.FC<AvatarProps> = ({
       {...props}
     >
       <AvatarPrimitive.Image
-        className="AvatarImage"
+        className="object-cover border-inherit w-[100%] h-[100%] aspect-square"
         src="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80"
         alt="Colm Tuite"
       />
