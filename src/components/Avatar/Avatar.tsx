@@ -22,16 +22,16 @@ const avatarProps = cva(["overflow-hidden select-none"], {
 
 export interface AvatarProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof avatarProps> {}
+    VariantProps<typeof avatarProps> {
+  intent?: "circle" | "square";
+  size?: "small" | "medium" | "large";
+}
 
 const Avatar: React.FC<AvatarProps> = ({
   className,
   intent = "circle",
   size = "medium",
   ...props
-}: {
-  intent?: "circle" | "square";
-  size?: "small" | "medium" | "large";
 }) => {
   return (
     <AvatarPrimitive.Root
