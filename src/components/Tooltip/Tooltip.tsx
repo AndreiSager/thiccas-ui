@@ -1,48 +1,53 @@
-import * as Tooltip from "@radix-ui/react-tooltip";
-import Button from "../Button/Button";
+import * as TooltipPrimitive from "@radix-ui/react-tooltip";
+import { cva, type VariantProps } from "class-variance-authority";
 
-const TooltipComponent = ({
-  text,
-  position,
-  intent,
-  trigger,
-}: {
-  intent?: "normal" | "danger";
-  position?: "left" | "right" | "top" | "bottom";
-  text: string;
-  trigger: any;
+const tooltipProps = cva("", {
+  variants: {
+    variant: {
+      top: "",
+      left: "",
+      bottom: "",
+      right: "",
+    },
+    defaultVariants: {
+      variant: "top",
+    },
+  },
+});
+
+export interface TooltipProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof tooltipProps> {
+  variant?: "left" | "right" | "top" | "bottom";
+  text?: string;
+  trigger?: any;
+}
+
+const Tooltip: React.FC<TooltipProps> = ({
+  className,
+  variant = "top",
+  text = "This is a tooltip",
+  trigger = <p className="text-sm">Hover me</p>,
+  ...props
 }) => {
-  if (intent == undefined) {
-    intent = "normal";
-  }
-  if (position == undefined) {
-    position = "top";
-  }
   return (
-    <Tooltip.Provider delayDuration={0}>
-      <Tooltip.Root>
-        <Tooltip.Trigger className="w-full" asChild>
+    <TooltipPrimitive.Provider delayDuration={0}>
+      <TooltipPrimitive.Root>
+        <TooltipPrimitive.Trigger className="w-full" asChild>
           {trigger}
-        </Tooltip.Trigger>
-        <Tooltip.Portal>
-          <Tooltip.Content
-            side={position}
-            className={
-              "max-w-xl rounded-lg border-2 bg-base-100 p-2 " +
-              (intent == "normal" ? "border-[#22242a]" : "border-red-500")
-            }
+        </TooltipPrimitive.Trigger>
+        <TooltipPrimitive.Portal>
+          <TooltipPrimitive.Content
+            side={variant}
+            className={"bg-primary max-w-xl rounded-lg border-2 p-2"}
           >
             {text}
-            {intent == "normal" ? (
-              <Tooltip.Arrow className="fill-[#22242a]" />
-            ) : (
-              <Tooltip.Arrow className="fill-red-500" />
-            )}
-          </Tooltip.Content>
-        </Tooltip.Portal>
-      </Tooltip.Root>
-    </Tooltip.Provider>
+            <TooltipPrimitive.Arrow className="fill-primary" />
+          </TooltipPrimitive.Content>
+        </TooltipPrimitive.Portal>
+      </TooltipPrimitive.Root>
+    </TooltipPrimitive.Provider>
   );
 };
 
-export default TooltipComponent;
+export default Tooltip;
