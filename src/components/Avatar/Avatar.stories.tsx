@@ -48,13 +48,3 @@ export const Sizes: Story = {
     </>
   ),
 };
-
-export const Badge: Story = {
-  render: () => (
-    <>
-      <Avatar size="small" />
-      <Avatar size="medium" />
-      <Avatar size="large" />
-    </>
-  ),
-};
