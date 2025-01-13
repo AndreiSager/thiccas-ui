@@ -7,9 +7,9 @@ const AvatarGroup: React.FC<AvatarProps> = ({
   ...props
 }) => {
   return (
-    <div>
+    <div className="-gap*-5 flex">
       {[1, 2, 3].map((avatar) => (
-        <Avatar />
+        <Avatar variant={variant} size={size} {...props} />
       ))}
     </div>
   );
