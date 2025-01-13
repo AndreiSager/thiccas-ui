@@ -38,3 +38,13 @@ export const Shape: Story = {
     </>
   ),
 };
+
+export const Sizes: Story = {
+  render: () => (
+    <>
+      <Avatar size="small" />
+      <Avatar size="medium" />
+      <Avatar size="large" />
+    </>
+  ),
+};
