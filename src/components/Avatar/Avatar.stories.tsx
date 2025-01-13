@@ -33,8 +33,8 @@ export const Overview: Story = {
 export const Shape: Story = {
   render: () => (
     <>
-      <Avatar intent="circle" />
-      <Avatar intent="square" />
+      <Avatar variant="circle" />
+      <Avatar variant="square" />
     </>
   ),
 };
