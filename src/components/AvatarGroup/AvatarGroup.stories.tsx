@@ -2,6 +2,9 @@ import createComponentTemplate from "@/functions/createComponentTemplate";
 import { Meta, StoryObj } from "@storybook/react";
 import AvatarGroup from "./AvatarGroup";
 
+/**
+ * Properties given to the `<AvatarGroup />`apply to all its children.
+ */
 const meta = {
   title: "Components/Avatar Group",
   component: AvatarGroup,
