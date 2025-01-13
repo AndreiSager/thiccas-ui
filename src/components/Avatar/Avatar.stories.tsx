@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import Avatar from "./Avatar";
 
 const meta = {
-  title: "Atom/Avatar",
+  title: "Components/Avatar",
   component: Avatar,
   decorators: [
     (Story) => (
