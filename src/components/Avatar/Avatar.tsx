@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../utils/cn";
 
 const avatarProps = cva(
-  "aspect-square overflow-hidden select-none flex items-center justify-center align-middle",
+  "aspect-square overflow-hidden select-none flex items-center justify-center align-middle border-2 border-white",
   {
     variants: {
       variant: {
