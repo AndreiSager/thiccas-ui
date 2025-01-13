@@ -43,11 +43,11 @@ const Avatar: React.FC<AvatarProps> = ({
     >
       <AvatarPrimitive.Image
         className="object-cover border-inherit w-[100%] h-[100%] aspect-square"
-        src="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80"
-        alt="Colm Tuite"
+        src="https://i.pinimg.com/550x/8c/9e/ee/8c9eeef65c24a4d30a92a908a18db430.jpg"
+        alt="Darius"
       />
       <AvatarPrimitive.Fallback className="AvatarFallback" delayMs={600}>
-        CT
+        D
       </AvatarPrimitive.Fallback>
     </AvatarPrimitive.Root>
   );
