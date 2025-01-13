@@ -5,9 +5,13 @@ import Avatar from "./Avatar";
 const meta = {
   title: "Atom/Avatar (WIP)",
   component: Avatar,
-  parameters: {
-    layout: "centered",
-  },
+  decorators: [
+    (Story) => (
+      <div className="flex gap-5">
+        <Story />
+      </div>
+    ),
+  ],
 } satisfies Meta<typeof Avatar>;
 
 export default meta;
@@ -25,6 +29,7 @@ export const Overview: Story = {
     },
   },
 };
+
 export const Shape: Story = {
   render: () => (
     <>
