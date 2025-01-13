@@ -6,7 +6,7 @@ const avatarProps = cva(
   "aspect-square overflow-hidden select-none flex items-center justify-center align-middle",
   {
     variants: {
-      intent: {
+      variant: {
         circle: "rounded-full",
         square: "rounded-lg",
       },
@@ -17,7 +17,7 @@ const avatarProps = cva(
       },
     },
     defaultVariants: {
-      intent: "circle",
+      variant: "circle",
       size: "medium",
     },
   }
@@ -26,19 +26,19 @@ const avatarProps = cva(
 export interface AvatarProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof avatarProps> {
-  intent?: "circle" | "square";
+  variant?: "circle" | "square";
   size?: "small" | "medium" | "large";
 }
 
 const Avatar: React.FC<AvatarProps> = ({
   className,
-  intent = "circle",
+  variant = "circle",
   size = "medium",
   ...props
 }) => {
   return (
     <AvatarPrimitive.Root
-      className={cn(avatarProps({ intent, size }))}
+      className={cn(avatarProps({ variant, size }))}
       {...props}
     >
       <AvatarPrimitive.Image
