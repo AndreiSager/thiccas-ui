@@ -8,7 +8,7 @@ const avatarProps = cva(
     variants: {
       intent: {
         circle: "rounded-full",
-        square: "rounded-sm",
+        square: "rounded-lg",
       },
       size: {
         small: "w-8 h-8",
