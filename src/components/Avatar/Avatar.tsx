@@ -2,16 +2,16 @@ import * as AvatarPrimitive from "@radix-ui/react-avatar";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../utils/cn";
 
-const avatarProps = cva("overflow-hidden select-none", {
+const avatarProps = cva("aspect-square overflow-hidden select-none", {
   variants: {
     intent: {
       circle: "rounded-full",
       square: "rounded-sm",
     },
     size: {
-      small: "text-sm w-10 h-10",
-      medium: "text-base w-12 h-12",
-      large: "text-lg",
+      small: "w-8 h-8",
+      medium: "w-10 h-10",
+      large: "w-12 h-12",
     },
   },
   defaultVariants: {
