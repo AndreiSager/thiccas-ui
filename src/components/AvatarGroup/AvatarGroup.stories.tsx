@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import AvatarGroup from "./AvatarGroup";
 
 const meta = {
-  title: "Components/AvatarGroup",
+  title: "Components/Avatar Group",
   component: AvatarGroup,
   decorators: [
     (Story) => (
