@@ -9,8 +9,8 @@ addons.setConfig({
     brandTarget: "_self",
 
     //
-    colorPrimary: "#3A10E5",
-    colorSecondary: "#3E9E41",
+    colorPrimary: "#5E4AE3",
+    colorSecondary: "#8384f6",
 
     // UI
     appBg: "#ffffff",
@@ -24,8 +24,8 @@ addons.setConfig({
     textInverseColor: "#ffffff",
 
     // Toolbar default and active colors
-    barTextColor: "#9E9E9E",
-    barSelectedColor: "#3E9E41",
+    barTextColor: "#E0E5FF",
+    barSelectedColor: "#8384f6",
     barHoverColor: "#585C6D",
     barBg: "#ffffff",
 
