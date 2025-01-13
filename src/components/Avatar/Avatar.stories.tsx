@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import Avatar from "./Avatar";
 
 const meta = {
-  title: "Atom/Avatar (WIP)",
+  title: "Atom/Avatar",
   component: Avatar,
   decorators: [
     (Story) => (
@@ -40,6 +40,16 @@ export const Shape: Story = {
 };
 
 export const Sizes: Story = {
+  render: () => (
+    <>
+      <Avatar size="small" />
+      <Avatar size="medium" />
+      <Avatar size="large" />
+    </>
+  ),
+};
+
+export const Badge: Story = {
   render: () => (
     <>
       <Avatar size="small" />
