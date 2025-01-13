@@ -20,7 +20,7 @@ const avatarProps = cva(
       variant: "circle",
       size: "medium",
     },
-  }
+  },
 );
 
 export interface AvatarProps
@@ -42,7 +42,7 @@ const Avatar: React.FC<AvatarProps> = ({
       {...props}
     >
       <AvatarPrimitive.Image
-        className="object-cover border-inherit w-[100%] h-[100%] aspect-square"
+        className="aspect-square h-[100%] w-[100%] border-inherit object-cover"
         src="https://i.pinimg.com/550x/8c/9e/ee/8c9eeef65c24a4d30a92a908a18db430.jpg"
         alt="Darius"
       />
