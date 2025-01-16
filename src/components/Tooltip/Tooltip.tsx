@@ -1,19 +1,22 @@
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 import { cva, type VariantProps } from "class-variance-authority";
 
-const tooltipProps = cva("", {
-  variants: {
-    variant: {
-      top: "",
-      left: "",
-      bottom: "",
-      right: "",
-    },
-    defaultVariants: {
-      variant: "top",
+const tooltipProps = cva(
+  "bg-black p-2 max-w-xl rounded-lg border-2 bg-primary",
+  {
+    variants: {
+      variant: {
+        top: "",
+        left: "",
+        bottom: "",
+        right: "",
+      },
+      defaultVariants: {
+        variant: "top",
+      },
     },
   },
-});
+);
 
 export interface TooltipProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -37,10 +40,7 @@ const Tooltip: React.FC<TooltipProps> = ({
           {trigger}
         </TooltipPrimitive.Trigger>
         <TooltipPrimitive.Portal>
-          <TooltipPrimitive.Content
-            side={variant}
-            className={"bg-primary max-w-xl rounded-lg border-2 p-2"}
-          >
+          <TooltipPrimitive.Content side={variant} {...props}>
             {text}
             <TooltipPrimitive.Arrow className="fill-primary" />
           </TooltipPrimitive.Content>
