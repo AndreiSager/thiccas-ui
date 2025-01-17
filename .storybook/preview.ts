@@ -14,6 +14,11 @@ const preview: Preview = {
       canvas: { sourceState: "shown" },
       source: { type: "dynamic" },
     },
+    options: {
+      storySort: {
+        order: ["Introduction", "Theme", "Components", "*", "WIP"],
+      },
+    },
   },
   tags: ["autodocs"],
 };
