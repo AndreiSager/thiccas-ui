@@ -6,7 +6,7 @@ import AvatarGroup from "./AvatarGroup";
  * Properties given to the `<AvatarGroup />`apply to all its children.
  */
 const meta = {
-  title: "Components/Avatar Group",
+  title: "Molecules/Avatar Group",
   component: AvatarGroup,
   decorators: [
     (Story) => (
