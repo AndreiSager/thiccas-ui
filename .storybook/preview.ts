@@ -16,7 +16,18 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ["Introduction", "Theme", "Components", "*", "WIP"],
+        order: [
+          "Welcome",
+          "Getting Started",
+          "Catalog",
+          "Changelog",
+          "Foundations",
+          "Atoms",
+          "Molecules",
+          "Organisms",
+          "Templates N' Pages",
+          "*",
+        ],
       },
     },
   },
