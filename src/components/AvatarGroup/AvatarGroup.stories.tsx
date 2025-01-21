@@ -36,8 +36,8 @@ export const Overview: Story = {
 export const Shape: Story = {
   render: () => (
     <>
-      <AvatarGroup variant="circle" />
-      <AvatarGroup variant="square" />
+      <AvatarGroup shape="circle" />
+      <AvatarGroup shape="square" />
     </>
   ),
 };
